@@ -1,7 +1,6 @@
 import io
 import wmi
 import json
-from ftplib import FTP
 
 data = {}
 mainboard = {}
@@ -45,6 +44,7 @@ for hardware in temperature_infos:
                 data[name]["voltage"][sensor.Name] = sensor.Value            
            
 json_data = json.dumps(data)
+print(json_data) // You can use data as desired, for demo purposes, we are printing it
 exit()
 
 
